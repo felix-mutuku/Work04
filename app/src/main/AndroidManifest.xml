@@ -22,7 +22,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".SignUpOneActivity" />
         <activity android:name=".SignUpTwoActivity" />
-        <activity android:name=".SignUpWaitingActivity"></activity>
+        <activity android:name=".SignUpWaitingActivity" />
+        <activity android:name=".PurchaseOrderActivity"></activity>
     </application>
 
 </manifest>

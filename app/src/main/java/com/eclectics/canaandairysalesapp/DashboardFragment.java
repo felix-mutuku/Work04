@@ -1,9 +1,7 @@
 package com.eclectics.canaandairysalesapp;
 
 
-import android.app.Dialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -11,14 +9,12 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.Button;
 import android.widget.ImageView;
 
 public class DashboardFragment extends Fragment {
 
     private ImageView drawer_icon, notification_icon, search_icon;
-    CardView make_order_card, orders_card;
+    CardView make_order_card, orders_card, register_buyer;
 
     public DashboardFragment() {
         // Required empty public constructor
@@ -36,6 +32,7 @@ public class DashboardFragment extends Fragment {
         search_icon = view.findViewById(R.id.search_icon);
         make_order_card = view.findViewById(R.id.make_order_card);
         orders_card = view.findViewById(R.id.orders_card);
+        register_buyer = view.findViewById(R.id.register_buyer);
 
         drawer_icon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,30 +69,31 @@ public class DashboardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //show order dialog
-                showDialog();
+                openMakeOrderActivity();
+            }
+        });
+
+        register_buyer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //open register buyer activity
+                openRegisterBuyerActivity();
             }
         });
 
         return view;
     }
 
-    private void showDialog() {
-        //show make new order dialog
-        final Dialog dialog = new Dialog(getActivity());
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.setCancelable(true);
-        dialog.setContentView(R.layout.dialog_make_order);
+    private void openRegisterBuyerActivity() {
+        //open Register Buyer Activity
+        Intent intent = new Intent(getActivity(), SignUpOneActivity.class);
+        startActivity(intent);
+    }
 
-        Button place_order_btn = dialog.findViewById(R.id.place_order_btn);
-
-        place_order_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-        dialog.show();
+    private void openMakeOrderActivity() {
+        //open purchase orders activity
+        Intent intent = new Intent(getActivity(), PurchaseOrderActivity.class);
+        startActivity(intent);
     }
 
     private void openOrderActivity() {

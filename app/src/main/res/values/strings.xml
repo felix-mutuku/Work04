@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Canaan Dairy Sales App</string>
+    <string name="app_name">CFL Dairy Sales</string>
     <string name="intro_2_string">You can view the dairy farmers registered onboard</string>
     <string name="skip">Skip</string>
     <string name="next">Next</string>
@@ -110,4 +110,6 @@
     <string name="ordered_via">Ordered Via</string>
     <string name="place_order">Place Order</string>
     <string name="buyer_register">Register Buyer</string>
+    <string name="purchase_order">Purchase Order</string>
+    <string name="selected_items">Selected Items for Order</string>
 </resources>

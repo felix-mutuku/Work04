@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#84BD00</color>
+    <color name="colorPrimaryDark">#84BD00</color>
+    <color name="colorAccent">#002D72</color>
+    <color name="blackColor">#000000</color>
+    <color name="colorGrey">#f1f1f1</color>
+    <color name="white">#ffffff</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorDarkBlue">#002D72</color>
+    <color name="colorDarkerBlue">#002D72</color>
+    <color name="colorDarkGreen">#024d14</color>
+    <color name="colorRed">#CC0000</color>
+    <color name="colorLimeGreen">#84BD00</color>
+
+    <color name="cardViewBackColor">#f5f5f5</color>
+    <color name="cardBackColor">#eeeeee</color>
+    <color name="landingCardView">#ffffff</color>
+
+    <color name="layout_background">#efebe9</color>
+
+    <color name="green">#84BD00</color>
+    <color name="red">#b5730202</color>
+    <color name="redPure">#c62828</color>
+
+    <array name="dot_on_page_active">
+        <item>#84BD00</item>
+        <item>#84BD00</item>
+        <item>#84BD00</item>
+    </array>
+
+    <array name="dot_on_page_not_active">
+        <item>#002D72</item>
+        <item>#002D72</item>
+        <item>#002D72</item>
+    </array>
+
+</resources>
